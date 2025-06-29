@@ -3,7 +3,7 @@ A Mainsail dark theme with orange accents designed to mimick the look of Printab
 
 
 ## Installation
-1. Clone the `custom.css` from this repo:
+1. Clone the files from this repo:
 ```bash
 git clone https://github.com/8bitmcu/mainsail-printables ~/printer_data/config/.theme
 ```
