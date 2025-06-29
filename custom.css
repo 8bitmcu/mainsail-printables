@@ -1,21 +1,11 @@
-.active-nav-item{
-    border-right: 0px !important;
-    background: #fa6831;
-    transition: 0.3s;
-}
-
-.active-nav-item .menu-item-title,
-.active-nav-item .menu-item-icon {
-    color: #18191a;
-}
-
-.v-list-item--active::before {
-    opacity: 0 !important;
-}
-
 :root {
     --v-warning-base: #fa6831;
     --v-error-base: #cb2c2c;
+
+    --p-background-dark: #1c1e20;
+    --p-background-darker: #18191a;
+    --p-border: #3f4143;
+    --p-accent-green: #5daf0b;
 }
 
 @font-face {
@@ -23,8 +13,40 @@
     src: url(AtlasGrostesk-Regular-Web.woff2);
 }
 
-.v-application {
+.v-application,
+.v-application .text-body-2 {
     font-family: Atlas Grotesk Web !important;
+}
+
+main#content {
+    background-color: var(--p-background-dark);
+}
+
+.active-nav-item {
+    border-right: 0px !important;
+    background: var(--v-warning-base);
+}
+
+.active-nav-item .menu-item-title,
+.active-nav-item .menu-item-icon {
+    color: black;
+}
+
+.v-item-group .v-list-item:not(.active-nav-item):hover .menu-item-title,
+.v-item-group .v-list-item:not(.active-nav-item):hover .v-icon {
+  color: var(--v-warning-base) !important;
+}
+
+.v-list-item::before {
+  opacity: 0 !important;
+}
+
+.v-list {
+    background-color: inherit !important;
+}
+
+.v-list-item--active::before {
+    opacity: 0 !important;
 }
 
 .v-btn,
@@ -33,15 +55,11 @@
     font-weight: bold;
 }
 
-main#content {
-    background-color: #1c1e20;
-}
-
 .v-toolbar,
 .v-navigation-drawer,
 .v-dialog,
 .v-menu__content {
-    background-color: #18191a !important;
+    background-color: var(--p-background-darker) !important;
 }
 
 .v-navigation-drawer__image,
@@ -65,9 +83,6 @@ hr,
     border: none !important;
 }
 
-.v-progress-circular__underlay {
-    stroke: #3f4143 !important;
-}
 
 .v-application .py-2 {
     padding: 0 !important;
@@ -75,15 +90,15 @@ hr,
 
 .v-application .success--text, 
 .v-application .green--text {
-    color: #5daf0b !important;
+    color: var(--p-accent-green) !important;
 }
 
 .v-application .green {
-    border-color: #5daf0b !important;
+    border-color: var(--p-accent-green) !important;
 }
 
 .v-application .success {
-    background-color: #5daf0b !important;
+    background-color: var(--p-accent-green) !important;
 }
 
 .v-btn,
@@ -96,12 +111,8 @@ hr,
 .v-tooltip__content.menuable__content__active,
 .v-menu__content {
     border-radius: 0 !important;
-    border: 1px solid #3f4143;
+    border: 1px solid var(--p-border);
     box-shadow: none !important;
-}
-
-.icon-rotate {
-    animation-duration: 1.75s!important;
 }
 
 .container {
@@ -131,7 +142,7 @@ div[class*="macrogroup"] .v-card__text {
 }
 
 .consoleScrollContainer {
-    background-color: #18191a;
+    background-color: var(--p-background-darker);
 }
 
 .v-menu__content {
@@ -141,3 +152,29 @@ div[class*="macrogroup"] .v-card__text {
 .v-menu__content .v-card {
     border: none !important;
 }
+
+tr:hover,
+.v-application .file-list-cursor.text--disabled:hover {
+    background: inherit !important;
+    color: var(--v-warning-base) !important;
+}
+
+.btnMinWidthAuto,
+._btn-group .v-btn[data-v-9ea80ab7],
+._btn-group .v-btn[data-v-1b2327b2],
+._btn-extruder-cmd {
+    background-color: var(--p-background-dark) !important;
+    border: 1px solid var(--p-border) !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+
+.v-btn.v-item--active {
+    background-color: inherit !important;
+    color: var(--v-warning-base) !important;
+}
+
+.v-btn.v-item--active::before {
+    opacity: 0 !important;
+}
+
