@@ -1,0 +1,14 @@
+# mainsail-printables
+A Mainsail dark theme with orange accents designed to mimick the look of Printables.
+
+
+## Installation
+1. Clone the `custom.css` from this repo:
+```bash
+git clone https://github.com/8bitmcu/mainsail-printables ~/printer_data/config/.theme
+```
+2. Go to ***Settings*** -> ***UI-Settings*** and set ***Logo*** and ***Primary*** color to `250, 104, 49`. 
+3. Optionally set the colors of your extruder and heated bed to #cb2c2c (red), #5daf0b (green) and #3f4143 (gray)
+
+## Preview
+![Screenshot](./screenshot.png)

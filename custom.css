@@ -1,0 +1,143 @@
+.active-nav-item{
+    border-right: 0px !important;
+    background: #fa6831;
+    transition: 0.3s;
+}
+
+.active-nav-item .menu-item-title,
+.active-nav-item .menu-item-icon {
+    color: #18191a;
+}
+
+.v-list-item--active::before {
+    opacity: 0 !important;
+}
+
+:root {
+    --v-warning-base: #fa6831;
+    --v-error-base: #cb2c2c;
+}
+
+@font-face {
+    font-family: Atlas Grotesk Web;
+    src: url(AtlasGrostesk-Regular-Web.woff2);
+}
+
+.v-application {
+    font-family: Atlas Grotesk Web !important;
+}
+
+.v-btn,
+.v-toolbar__title,
+.subheading {
+    font-weight: bold;
+}
+
+main#content {
+    background-color: #1c1e20;
+}
+
+.v-toolbar,
+.v-navigation-drawer,
+.v-dialog,
+.v-menu__content {
+    background-color: #18191a !important;
+}
+
+.v-navigation-drawer__image,
+.v-navigation-drawer__border {
+    display: none;
+}
+
+.panel-toolbar,
+.v-card,
+.v-tabs-bar,
+.v-tabs-items,
+.v-data-table,
+.v-input__slot {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+hr,
+.filesJobqueue,
+.consoleTable.mini {
+    border: none !important;
+}
+
+.v-progress-circular__underlay {
+    stroke: #3f4143 !important;
+}
+
+.v-application .py-2 {
+    padding: 0 !important;
+}
+
+.v-application .success--text, 
+.v-application .green--text {
+    color: #5daf0b !important;
+}
+
+.v-application .green {
+    border-color: #5daf0b !important;
+}
+
+.v-application .success {
+    background-color: #5daf0b !important;
+}
+
+.v-btn,
+.v-input__slot {
+    border-radius: 0px !important;
+}
+
+.v-dialog,
+.v-sheet.v-card,
+.v-tooltip__content.menuable__content__active,
+.v-menu__content {
+    border-radius: 0 !important;
+    border: 1px solid #3f4143;
+    box-shadow: none !important;
+}
+
+.icon-rotate {
+    animation-duration: 1.75s!important;
+}
+
+.container {
+    padding: 25px;
+}
+
+._filamentRunout-subheader {
+    padding-bottom: 10px;
+}
+
+.webcamBackground {
+    margin-bottom: 12px;
+}
+
+div[class*="macrogroup"] .v-card__text {
+    padding-bottom: 16px !important;
+}
+
+.v-btn:not(.v-btn--outlined).primary,
+.v-btn:not(.v-btn--round).v-size--default {
+    color: white;
+}
+
+.v-btn.warning,
+.v-btn.primary {
+    color: black !important;
+}
+
+.consoleScrollContainer {
+    background-color: #18191a;
+}
+
+.v-menu__content {
+    padding: 20px;
+}
+
+.v-menu__content .v-card {
+    border: none !important;
+}
