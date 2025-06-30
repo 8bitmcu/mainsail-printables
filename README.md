@@ -12,4 +12,4 @@ git clone https://github.com/8bitmcu/mainsail-printables ~/printer_data/config/.
 4. Optionally set the colors of your extruder and heated bed to #cb2c2c (red), #5daf0b (green) and #3f4143 (gray)
 
 ## Preview
-![Screenshot](./screenshot.png)
+![Screenshot](./screenshot.jpg)
