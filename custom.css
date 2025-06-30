@@ -1,4 +1,5 @@
 :root {
+    --v-info-base: #fa6831;
     --v-warning-base: #fa6831;
     --v-error-base: #cb2c2c;
 
@@ -179,5 +180,22 @@ tr:hover,
 
 .v-btn.v-item--active::before {
     opacity: 0 !important;
+}
+
+.v-application .v-btn.primary {
+    color: white !important;
+    background-color: var(--p-background-dark) !important;
+    border: 1px solid var(--p-border) !important;
+}
+
+.v-application .v-btn.secondary {
+    color: white !important;
+    background-color: var(--p-background-dark) !important;
+    border: 1px solid white !important;
+}
+
+.v-application .v-btn.primary:hover,
+.v-application .v-btn.secondary:hover {
+    color: var(--v-warning-base) !important;
 }
 
