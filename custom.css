@@ -1,4 +1,4 @@
-:root {
+:root .theme--dark {
     --v-info-base: #fa6831;
     --v-warning-base: #fa6831;
     --v-error-base: #cb2c2c;
@@ -7,6 +7,23 @@
     --p-background-darker: #18191a;
     --p-border: #3f4143;
     --p-accent-green: #5daf0b;
+    --p-text-color: rgb(224, 224, 224);
+    --p-text-color2: #b3b3b3;
+    --p-text-color3: black;
+}
+
+:root .theme--light {
+    --v-info-base: #fa6831;
+    --v-warning-base: #fa6831;
+    --v-error-base: #cb2c2c;
+
+    --p-background-dark: #fdfdfd;
+    --p-background-darker: #f5f5f5;
+    --p-border: #e0e0e0;
+    --p-accent-green: #5daf0b;
+    --p-text-color: rgb(42, 42, 42);
+    --p-text-color2: rgb(128, 128, 128);
+    --p-text-color3: white;
 }
 
 @font-face {
@@ -19,8 +36,26 @@
     font-family: Atlas Grotesk Web !important;
 }
 
+header.topbar {
+    box-shadow: none !important;
+}
+
 main#content {
     background-color: var(--p-background-dark);
+}
+
+.theme--light.v-sheet,
+.theme--dark.v-sheet {
+    color: var(--p-text-color);
+}
+
+.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th,
+.v-input--is-disabled,
+.v-input--is-disabled input,
+.v-input--is-disabled textarea,
+.theme--light.v-application .text--disabled,
+.theme--dark.v-application .text--disabled {
+    color: var(--p-text-color2) !important;
 }
 
 .active-nav-item {
@@ -28,18 +63,26 @@ main#content {
     background: var(--v-warning-base);
 }
 
+.panel-toolbar {
+    border-bottom: 1px solid var(--p-border) !important;
+}
+
 .active-nav-item .menu-item-title,
-.active-nav-item .menu-item-icon {
-    color: black;
+.active-nav-item .menu-item-icon,
+.theme--light.v-icon,
+.theme--dark.v-icon,
+.theme--light.v-btn.v-btn--icon,
+.theme--dark.v-btn.v-btn--icon {
+    color: var(--p-text-color);
 }
 
 .v-item-group .v-list-item:not(.active-nav-item):hover .menu-item-title,
 .v-item-group .v-list-item:not(.active-nav-item):hover .v-icon {
-  color: var(--v-warning-base) !important;
+    color: var(--v-warning-base) !important;
 }
 
 .v-list-item::before {
-  opacity: 0 !important;
+    opacity: 0 !important;
 }
 
 .v-list {
@@ -57,6 +100,7 @@ main#content {
 }
 
 .v-toolbar,
+.topbar .v-btn,
 .v-navigation-drawer,
 .v-dialog,
 .v-menu__content {
@@ -103,11 +147,18 @@ hr,
 }
 
 .v-btn,
-.v-chip,
-.v-input__slot {
+.v-chip {
     border-radius: 0px !important;
     box-shadow: none !important;
     background-color: var(--p-background-dark) !important;
+}
+
+.v-input__slot {
+    border-radius: 0px !important;
+}
+
+.update-manager-list .v-chip--disabled {
+    opacity: 1;
 }
 
 .v-dialog,
@@ -136,13 +187,22 @@ div[class*="macrogroup"] .v-card__text {
 }
 
 .v-btn:not(.v-btn--outlined).primary,
-.v-btn:not(.v-btn--round).v-size--default {
-    color: white;
+.v-btn:not(.v-btn--round).v-size--default,
+.v-btn.primary {
+    color: var(--p-text-color);
 }
 
-.v-btn.warning,
-.v-btn.primary {
-    color: black !important;
+.v-btn.warning {
+    color: var(--p-text-color3) !important;
+}
+
+.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),
+.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+    color: var(--p-text-color) !important;
+}
+
+.menu-item-title {
+    opacity: 1 !important;
 }
 
 .consoleScrollContainer {
@@ -170,7 +230,7 @@ tr:hover,
     background-color: var(--p-background-dark) !important;
     border: 1px solid var(--p-border) !important;
     box-shadow: none !important;
-    color: white !important;
+    color: var(--p-text-color) !important;
 }
 
 .v-btn.v-item--active {
@@ -183,15 +243,15 @@ tr:hover,
 }
 
 .v-application .v-btn.primary {
-    color: white !important;
+    color: var(--p-text-color) !important;
     background-color: var(--p-background-dark) !important;
     border: 1px solid var(--p-border) !important;
 }
 
 .v-application .v-btn.secondary {
-    color: white !important;
+    color: var(--p-text-color) !important;
     background-color: var(--p-background-dark) !important;
-    border: 1px solid white !important;
+    border: 1px solid var(--p-text-color) !important;
 }
 
 .v-application .v-btn.primary:hover,
